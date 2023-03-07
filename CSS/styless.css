@@ -1,4 +1,4 @@
-/* Gérénal ........................................................................ */
+/*#region General */
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
 
@@ -15,17 +15,28 @@ html, body{
     font-family: 'Raleway', Arial, sans-serif;
     font-weight: 400;
     font-size: 16px;
+
 }
 
 .container{
     width: 100%;
-    max-width: 1400px;
+    max-width: 1440px;
     margin: 0 auto;
+    padding: 0 25px;
 }
 
 a{
     text-decoration: none;
     color: black;
+    cursor: pointer;
+}
+
+a:hover {
+     transform: scale(1.1) 
+}
+
+button{
+    cursor: pointer;
 }
 
 ul{
@@ -38,8 +49,9 @@ ul{
     --color-gray : #F2F2F2;
     --color-gray2 :#D9D9D9;
 }
-/* HEADER ........................................................................ */
-/* Menu ........................................................................ */
+/*#endregion General*/
+/*#region Header */
+/*#region Menu */
 
 .menu{
     display: flex;
@@ -62,18 +74,22 @@ ul{
     width: 100%;
 }
 
-/*#region Toto */
+.navigation{
+    height: 100%;
+}
 
 .navigation-list{
     display: flex;
+    height: 100%;
     padding: 0;
     margin:0;
 }
 
 .navigation-list__item{
     display: block;
-    width:200px;
-    margin:20px 0 66px 0;
+    height: 100%;
+    width:114px;
+    margin:0 0 0 66px;
     padding: 50px 0 0 0;
     border-top:2px solid transparent; 
 }
@@ -94,8 +110,8 @@ ul{
     color: var(--color-blue1);
 }
 
-/*#endregion */
-/* Search ........................................................................ */
+/*#endregion Menu */
+/*#region Search */
 
 .search{
     display: flex;
@@ -105,7 +121,6 @@ ul{
 }
 
 .search-header__title{
-   
     font-size: 22px;
     font-weight: 700;
     margin: 0%;
@@ -131,19 +146,11 @@ ul{
     align-items: center;
 }
 
-.search-form__search{
-   
-}
-
 #votre_recherche{
     font-size: 18px;
     font-weight: 700;
     text-align:center;
     border: 1px var(--color-gray) solid;
-}
-
-.fa-location-dot{
-      
 }
 
 .search-button{
@@ -155,8 +162,8 @@ ul{
     border-radius: 0px 15px 15px 0px;
     border-color: transparent;
 }
-
-/* Filter ........................................................................ */
+/*#endregion Search */
+/*#region Filter */
 
 .filter{
     display: flex;
@@ -192,9 +199,8 @@ ul{
 .filter-list :hover{
     background-color: var(--color-blue2);
 }
-
-
-/* Info ........................................................................ */
+/*#endregion Filter */
+/*#region Info */
 
 .info{
     display: flex;
@@ -213,29 +219,30 @@ ul{
     color: var(--color-blue1);
     margin-right: 1%;
 }
-
-/* Hébergements ........................................................................ */
+/*#endregion Info */
+/*#endregion Header*/
+/*#region Lodging and popular */
 
 .section--page-content{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    border: 2px blue solid;
 }
 .section--lodging{
-width: 880px;
-height: 625px;
-background-color: var(--color-gray);
-border-radius: 20px;
-border: 2px rgb(255, 0, 17) solid;
+    width: calc(100% - 428px - 40px);
+    height: 625px;
+    background-color: var(--color-gray);
+    border-radius: 20px;
 }
 
 .header__lodging-title{
-    margin-left: 3%;
-    margin-top: 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 60px);
+    margin: 30px;
     font-size: 22px;
     font-weight: 700;
-    border: 2px blue solid;
 }
 
 .lodging{
@@ -245,10 +252,10 @@ border: 2px rgb(255, 0, 17) solid;
 }
 
 .lodging-card{
- margin-bottom: 30px;
- background-color: #FFFFFF;
- border: 5px #FFFFFF solid;
- border-radius: 20px;
+    margin-bottom: 30px;
+    background-color: #FFFFFF;
+    border: 5px #FFFFFF solid;
+    border-radius: 20px;
 }
 
 .lodging-card__figure{
@@ -274,6 +281,20 @@ border: 2px rgb(255, 0, 17) solid;
     flex-direction: column;
 }
 
+.lodging-card__title{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+
+.lodging-card__price{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+
 .display{
     font-size: 18px;
     font-weight: 700;
@@ -285,21 +306,17 @@ border: 2px rgb(255, 0, 17) solid;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 420px;
+    width: 428px;
     height: 625px;
     background-color: #F2F2F2;
     border-radius: 20px;
 }
 
 .section-header__lodging__popular{
-    display: flex;
-    justify-content: space-between;
-    width: 343px;
-    border: 2px rgb(98, 251, 42) solid;
+    width: 100%;
 }
 
-.lodging__popular-icon{
-    margin-top: 46px;
+.fa-chart-line{
     color: var(--color-blue1);
 }
 
@@ -315,19 +332,20 @@ border: 2px rgb(255, 0, 17) solid;
     margin-bottom: 32px;
     width: 343px;
     height: 144px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     justify-content: center;
-    align-items: center;
     border-radius: 20Px;
+    border: 5px #ffffff solid;
 }
 
 .lodging__popular-card__figure{
     width: 137px;
-    height: 144px;
+    height: 100%;
     align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
-    border: 2px mediumspringgreen solid;
+    border-radius: 16px 0px 0px 16px;
 }
 
 .lodging__popular-card__figure img{
@@ -337,22 +355,26 @@ border: 2px rgb(255, 0, 17) solid;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
 }
 
+.lodging__popular-card__description{
+    margin-left: 3%;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    width: calc(100% - 124px);
+}
 
-.lodging-card__title{
+.lodging__popular-card__title{
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 0;
-    margin-top: 8px;
-
 }
 
-.lodging-card__price{
+.lodging__popular-card__price{
     font-size: 14px;
     font-weight: 600;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     margin-top: 8px;
 }
 
@@ -360,6 +382,7 @@ border: 2px rgb(255, 0, 17) solid;
     display: flex;
     margin-bottom: 0;
     margin-top: 8px;
+    cursor: pointer;
 }
 
 .star i{
@@ -374,38 +397,39 @@ border: 2px rgb(255, 0, 17) solid;
     color: var(--color-gray);
 }
 
-.star :hover{
-  font-weight: bold;
-  opacity:0; 
+.star .fa-star:hover ~ .fa-star {
+    color: var(--color-gray);
 }
 
-.test{
-    color: #0065FC;
+.star:hover .fa-star {
+    color: var(--color-blue1);
 }
-
+/*#endregion Lodging and popular */
+/*#region Activity */
 .activity{
     display: flex;
     justify-content: space-between;
-    border: 2px brown solid;    
+}
+
+.section__header_activity{
+    width: 100%;
 }
 
 .activity-card{
     display: flex;
     flex-direction: column;
+    width: calc(100% / 4 - 30px);
     border-radius: 20px;
-    border: 2px rgb(16, 202, 244) solid;
-    
 }
 
 .activity-card__figure{
-    width: 302px;
+    width: 100%;
     height: 388px;
     border-radius: 20px;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
-    border: 2px rgb(174, 249, 63) solid;
 }
 
 .activity-card__figure img{
@@ -418,34 +442,46 @@ border: 2px rgb(255, 0, 17) solid;
 }
 
 .activity-card__title{
-    margin-left: 10%;
+    margin-left: 8%;
+    font-weight: 700;
 }
-
+/*#endregion Activity */
+/*#region Footer */
 .footer-information{
     display: flex;
     justify-content:flex-start;
     width: 100%;
     height: 226px;
     background-color: var(--color-gray);
-    border: 2px rgb(249, 63, 156) solid;
+    margin-top: 65px;
 }
 
 .information{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    border: 2px rgb(63, 249, 91) solid;
+    width: calc(100%/3 - 40px);
+    margin: 0 auto;
+}
+
+.information-title{
+    font-size: 18px;
+    font-size: 700;
 }
 
 .information-list{
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
 .information-list__item{
-    
+    line-height: 30px;
 }
 
-.information-list__link{
-
+.information-list__item:hover{
+    transform: scale(1.1);
 }
+
+/*#endregion Footer */
