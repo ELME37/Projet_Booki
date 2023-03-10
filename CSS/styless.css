@@ -14,7 +14,7 @@ html, body{
     padding: 0;
     font-family: 'Raleway', Arial, sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1em;
 
 }
 
@@ -88,8 +88,8 @@ ul{
 .navigation-list__item{
     display: block;
     height: 100%;
-    width:114px;
-    margin:0 0 0 66px;
+    width: 114px;
+    margin: 0 0 0 66px;
     padding: 50px 0 0 0;
     border-top:2px solid transparent; 
 }
@@ -102,7 +102,7 @@ ul{
     display: block;
     text-align: center;
     width: 100%;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 500;
 }
 
@@ -121,13 +121,13 @@ ul{
 }
 
 .search-header__title{
-    font-size: 22px;
+    font-size: 1.4em;
     font-weight: 700;
     margin: 0%;
 }
 
 .search-header__subtitle{
-    font-size: 16px;
+    font-size: 1em;
     margin-top: 8px;
 }
 
@@ -147,7 +147,7 @@ ul{
 }
 
 #votre_recherche{
-    font-size: 18px;
+    font-size: 1.1em;
     font-weight: 700;
     text-align:center;
     border: 1px var(--color-gray) solid;
@@ -156,44 +156,59 @@ ul{
 .search-button{
     background-color: var(--color-blue1);
     color: #FFFFFF;
-    font-size: 18px;
+    font-size: 1.1em;
     font-weight: 700;
     padding: 1%;
     border-radius: 0px 15px 15px 0px;
     border-color: transparent;
+}
+
+.search-button:hover{
+    transform: scale(1.1);
+    background-color: #FFFFFF;
+    color: var(--color-blue1);
+    border: 2px var(--color-blue1) solid;
+    box-shadow: 0px 0px 5px var(--color-blue1);
+}
+
+.fa-magnifying-glass{
+    display: none;
 }
 /*#endregion Search */
 /*#region Filter */
 
 .filter{
     display: flex;
-    height: 100px;
     align-items: center;
+    margin-top: 2em;
+    gap: 1em;
 }
 
 .filter-title{
-    font-size: 18px;
+    font-size: 1.1em;
     font-weight: 700;
-    margin-right: 30px ;
+    margin: 0;
 }
 
 .filter-list{
     display: flex;
-    justify-content: space-between;
-    width: 60%;
+    align-items: center;
+    gap: 1em;
 }
 
 .filter-list__item{
-    font-size: 17px;
+    font-size: 1.1em;
     font-weight: 700;
     border-radius: 25px;
     background-color: #FFFFFF;
     border: 2px var(--color-gray2) solid;
-    padding: 2% 3%;
+    padding: 0.8em;
 }
 
 .filter-list__item i{
+    font-size: 1.1em;
     color: var(--color-blue1);
+    padding-right: 0.5em;
 }
 
 .filter-list :hover{
@@ -205,7 +220,7 @@ ul{
 .info{
     display: flex;
     align-items: center;
-    height: 100px;
+    height: 80px;
 }
 
 .info-icon{
@@ -241,7 +256,7 @@ ul{
     align-items: center;
     width: calc(100% - 60px);
     margin: 30px;
-    font-size: 22px;
+    font-size: 1.4em;
     font-weight: 700;
 }
 
@@ -252,16 +267,19 @@ ul{
 }
 
 .lodging-card{
+    width: 30%;
     margin-bottom: 30px;
     background-color: #FFFFFF;
     border: 5px #FFFFFF solid;
     border-radius: 20px;
+    padding-bottom: 0.8em;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 }
 
 .lodging-card__figure{
-    width: 246px;
+    width: 100%;
     height: 124px;
-    border-radius: 16px;
+    border-radius: 16px 16px 0 0;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -282,24 +300,28 @@ ul{
 }
 
 .lodging-card__title{
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 700;
     margin-bottom: 0;
     margin-top: 8px;
 }
 
 .lodging-card__price{
-    font-size: 14px;
+    font-size: 0.9em;
     font-weight: 600;
     margin-bottom: 0;
     margin-top: 8px;
 }
 
 .display{
-    font-size: 18px;
+    font-size: 1.1em;
     font-weight: 700;
     border: transparent;
     margin-left: 3%;
+}
+
+.display:hover{
+    text-decoration: underline;
 }
 
 .section--lodging__popular{
@@ -325,17 +347,20 @@ ul{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   
 }
 
 .lodging__popular-card{
     display: flex;
     margin-bottom: 32px;
-    width: 343px;
+    width: calc(100% - 60px);
     height: 144px;
     background-color: #ffffff;
     justify-content: center;
     border-radius: 20Px;
     border: 5px #ffffff solid;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  
 }
 
 .lodging__popular-card__figure{
@@ -363,16 +388,17 @@ ul{
     flex-direction:column;
     justify-content: space-between;
     width: calc(100% - 124px);
+    padding-bottom: 0.3em;
 }
 
 .lodging__popular-card__title{
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 700;
     margin-bottom: 0;
 }
 
 .lodging__popular-card__price{
-    font-size: 14px;
+    font-size: 0.9em;
     font-weight: 600;
     margin-bottom: 0px;
     margin-top: 8px;
@@ -386,7 +412,7 @@ ul{
 }
 
 .star i{
-    font-size: 12px;
+    font-size: 0.8em;
 }
 
 .blue{
@@ -406,9 +432,14 @@ ul{
 }
 /*#endregion Lodging and popular */
 /*#region Activity */
+.section--activity{
+    margin-top: 60px;
+}
+
 .activity{
     display: flex;
     justify-content: space-between;
+    
 }
 
 .section__header_activity{
@@ -418,14 +449,16 @@ ul{
 .activity-card{
     display: flex;
     flex-direction: column;
-    width: calc(100% / 4 - 30px);
+    width: calc(100% / 4 - 2%);
     border-radius: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 }
 
 .activity-card__figure{
     width: 100%;
     height: 388px;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -465,8 +498,9 @@ ul{
 }
 
 .information-title{
-    font-size: 18px;
+    font-size: 1.1em;
     font-size: 700;
+    margin: 45px 0 20px 0;
 }
 
 .information-list{
@@ -485,3 +519,137 @@ ul{
 }
 
 /*#endregion Footer */
+
+@media screen and (max-width: 1024px) {
+
+
+    .section--page-content{
+        flex-direction: column;
+    }
+
+    .section--lodging{
+        width: 100%;
+    }
+
+    .filter{
+        flex-direction: column;
+        align-items: baseline;
+    } 
+
+    .section--lodging__popular{
+        width: 100%;
+        margin-top: 50px;
+        height: auto;
+    }
+
+    .lodging__popular{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .lodging__popular-card{
+        width: 30%;
+    }
+
+    .activity-card{
+        height: 270px;
+    }
+
+    }
+
+    @media screen and (max-width: 767.98px) {
+      
+        .menu{
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .navigation-list__item{
+            padding:  0 0 20px 0;
+            border-bottom:2px solid transparent;
+        }
+        
+        .navigation-list__item:hover{
+            border-top-color:transparent;
+            border-bottom-color:var(--color-blue1);
+        }
+
+        .button_title{
+            display: none;
+        }
+
+        .fa-magnifying-glass{
+            display: inline;
+            padding: 0.5em;
+        }
+        
+        .filter-list{
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .filter-list__item{
+            width: calc(50% - 3%);
+            font-size: 11px;
+        }
+        
+        .section--page-content{
+            flex-direction: column-reverse;
+        }
+
+        .section--lodging__popular{
+
+            margin: 0;
+            border-radius: 0px;
+        }
+
+        .lodging__popular{
+            flex-direction: column;
+           
+        }
+
+        .lodging__popular-card{
+            width: 90%;
+            margin: 10px auto;
+        }
+
+        .section--lodging{
+            height: auto;
+            border-radius: 0px;
+            background-color: #FFFFFF;
+        }
+
+        .lodging{
+            flex-direction: column;
+        }
+
+        .lodging-card{
+            width: 90%;
+            margin: 10px auto;
+        }
+
+        .display{
+            background-color: #FFFFFF;
+        }
+
+        .activity{
+            flex-direction: column;
+        }
+
+        .activity-card{
+            width: 90%;
+            margin: 10px auto;
+        }
+
+        .footer-information{
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+        }
+
+        .information{
+            width: 100%;
+            margin-left: 10%;
+        }
+      }
