@@ -157,7 +157,6 @@ ul {
 
 #votre_recherche::placeholder {
     color: black;
-    text-align: center;
 }
 
 .search-button {
@@ -581,6 +580,14 @@ ul {
     .lodging__popular-card {
         width: 31%;
     }
+
+    .lodging__popular-card__figure {
+        width: 106px;
+    }
+
+    .lodging__popular-card__description{
+        width: calc(100% - 106px);
+    }
     
     .activity-card {
         height: 268px;
@@ -604,6 +611,10 @@ ul {
         height: auto;
     }
 
+    .container--fluid{
+        padding: 0;
+    }
+
     .navigation {
         width: 100%;
         margin-top: 48px;
@@ -621,7 +632,7 @@ ul {
     .navigation-list__item {
         padding: 0 0 24px 0;
         border-bottom: 3px solid transparent;
-        width: 100%;
+        width: 50%;
         margin: 0 auto;
     }
 
@@ -636,6 +647,10 @@ ul {
 
     .search-form {
         justify-content: center;
+    }
+
+    #votre_recherche{
+        width: calc(100% - 20px);
     }
 
     .search-header__title {
