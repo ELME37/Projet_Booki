@@ -15,13 +15,13 @@ body {
     padding: 0;
     font-family: 'Raleway', Arial, sans-serif;
     font-weight: 400;
-    font-size: 1em;
+    font-size: 16px;
 
 }
 
 .container {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 25px;
 }
@@ -32,8 +32,9 @@ a {
     cursor: pointer;
 }
 
-a:hover {
-    transform: scale(1.1)
+article:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 button {
@@ -104,12 +105,13 @@ ul {
     display: block;
     text-align: center;
     width: 100%;
-    font-size: 1em;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .navigation-list__item:hover .navigation-list__link {
     color: var(--color-blue1);
+    font-weight: 500;
 }
 
 /*#endregion Menu */
@@ -123,13 +125,13 @@ ul {
 }
 
 .search-header__title {
-    font-size: 1.4em;
+    font-size: 22px;
     font-weight: 700;
     margin: 0%;
 }
 
 .search-header__subtitle {
-    font-size: 1em;
+    font-size: 16px;
     margin-top: 8px;
 }
 
@@ -148,7 +150,7 @@ ul {
 }
 
 #votre_recherche {
-    font-size: 1.1em;
+    font-size: 18px;
     font-weight: 700;
     text-align: left;
     padding: 0 10px;
@@ -162,7 +164,7 @@ ul {
 .search-button {
     background-color: var(--color-blue1);
     color: #FFFFFF;
-    font-size: 1.1em;
+    font-size: 18px;
     font-weight: 700;
     padding: 1%;
     border-radius: 0px 15px 15px 0px;
@@ -192,7 +194,7 @@ ul {
 }
 
 .filter-title {
-    font-size: 1.1em;
+    font-size: 18px;
     font-weight: 700;
     margin: 0;
 }
@@ -204,18 +206,19 @@ ul {
 }
 
 .filter-list__item {
-    font-size: 1.1em;
+    display: flex;
+    font-size: 17px;
     font-weight: 700;
     border-radius: 25px;
     background-color: #FFFFFF;
     border: 2px var(--color-gray2) solid;
-    padding: 0.7em 1em;
+    padding: 0.8em 1em;
 }
 
 .filter-list__item i {
-    font-size: 1.1em;
+    font-size: 16px;
     color: var(--color-blue1);
-    padding-right: 0.5em;
+    padding-right: 10px;
 }
 
 .filter-list :hover {
@@ -252,14 +255,14 @@ ul {
     width: 100%;
 }
 
-.section--page-content .container{
+.section--page-content .container {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
 .section--lodging {
-    width: calc(100% - 420px - 40px);
+    width: calc(100% - 32% - 40px);
     height: 625px;
     background-color: var(--color-gray);
     border-radius: 20px;
@@ -271,7 +274,7 @@ ul {
     align-items: center;
     width: calc(100% - 60px);
     margin: 30px;
-    font-size: 1.4em;
+    font-size: 22px;
     font-weight: 700;
 }
 
@@ -284,12 +287,11 @@ ul {
 
 .lodging-card {
     width: 32%;
-    height: 200px;
     margin-bottom: 30px;
     background-color: #FFFFFF;
     border: 5px #FFFFFF solid;
     border-radius: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 5px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -317,25 +319,26 @@ ul {
 }
 
 .lodging-card__title {
-    font-size: 1em;
+    font-size: 16px;
     font-weight: 700;
     margin-bottom: 0;
     margin-top: 4px;
 }
 
 .lodging-card__price {
-    font-size: 0.9em;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 400;
     margin-bottom: 0;
     margin-top: 4px;
 }
 
 .display {
-    font-size: 1.1em;
+    font-size: 18px;
     font-weight: 700;
     border: transparent;
     margin-left: 3%;
     margin-top: 10px;
+    background-color: var(--color-gray);
 }
 
 .display:hover {
@@ -346,7 +349,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 420px;
+    width: 32%;
     height: 625px;
     background-color: #F2F2F2;
     border-radius: 20px;
@@ -372,7 +375,7 @@ ul {
 .lodging__popular-card {
     display: flex;
     margin-bottom: 32px;
-    width: calc(100% - 60px);
+    width: 88%;
     height: 144px;
     background-color: #ffffff;
     justify-content: center;
@@ -380,6 +383,11 @@ ul {
     border: 5px #ffffff solid;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 
+}
+
+.lodging__popular-card__link {
+    display: flex;
+    width: 100%;
 }
 
 .lodging__popular-card__figure {
@@ -411,14 +419,14 @@ ul {
 }
 
 .lodging__popular-card__title {
-    font-size: 1em;
+    font-size: 16px;
     font-weight: 700;
     margin-bottom: 0;
 }
 
 .lodging__popular-card__price {
-    font-size: 0.9em;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 400;
     margin-bottom: 0px;
     margin-top: 8px;
 }
@@ -431,7 +439,7 @@ ul {
 }
 
 .star i {
-    font-size: 0.8em;
+    font-size: 12px;
 }
 
 .blue {
@@ -465,7 +473,7 @@ ul {
     width: 100%;
 }
 
-.section__header_activity .header__lodging-title{
+.section__header_activity .header__lodging-title {
     margin: 20px 0;
 }
 
@@ -477,6 +485,12 @@ ul {
     border-radius: 20px;
     background-color: #FFFFFF;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.activity-card__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .activity-card__figure {
@@ -499,8 +513,10 @@ ul {
 }
 
 .activity-card__title {
-    margin-left: 8%;
+    height: 56px;
+    margin: 20px 0 0 20px;
     font-weight: 700;
+    font-size: 16px;
 }
 
 /*#endregion Activity */
@@ -518,12 +534,12 @@ ul {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    width: calc(100% / 3 );
-   margin-left: 70px;
+    width: calc(100% / 3);
+    margin-left: 70px;
 }
 
 .information-title {
-    font-size: 1.1em;
+    font-size: 18px;
     font-weight: 700;
     margin: 45px 0 20px 0;
 }
@@ -537,6 +553,8 @@ ul {
 
 .information-list__item {
     line-height: 30px;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .information-list__item:hover {
@@ -545,10 +563,14 @@ ul {
 
 /*#endregion Footer */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 992px) {
 
-    .filter-list{
-        gap: 1.5em;
+    .filter {
+        gap: 1.4em;
+    }
+
+    .filter-list {
+        gap: 1.2em;
     }
 
     .section--page-content .container {
@@ -559,10 +581,10 @@ ul {
         width: 100%;
     }
 
-    .section--lodging__popular .header__lodging-title{
+    .section--lodging__popular .header__lodging-title {
         width: 100%;
         margin: 30px 0;
-       
+
     }
 
     .section--lodging__popular {
@@ -579,31 +601,45 @@ ul {
 
     .lodging__popular-card {
         width: 31%;
+        height: 160px;
     }
 
     .lodging__popular-card__figure {
         width: 106px;
     }
 
-    .lodging__popular-card__description{
+    .lodging__popular-card__description {
         width: calc(100% - 106px);
     }
-    
+
+    .lodging__popular-card__title {
+        margin-top: 12px;
+    }
+
+    .lodging__popular-card__price {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
     .activity-card {
         height: 268px;
     }
 
-    .section__header_activity .header__lodging-title{
+    .activity-card__figure {
+        height: 211px;
+    }
+
+    .section__header_activity .header__lodging-title {
         margin: 30px 0;
     }
 
-    .information{
+    .information {
         margin-left: 6%;
     }
 
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 768px) {
 
     .menu {
         flex-direction: column;
@@ -611,7 +647,7 @@ ul {
         height: auto;
     }
 
-    .container--fluid{
+    .container--fluid {
         padding: 0;
     }
 
@@ -649,7 +685,7 @@ ul {
         justify-content: center;
     }
 
-    #votre_recherche{
+    #votre_recherche {
         width: calc(100% - 20px);
     }
 
@@ -677,8 +713,9 @@ ul {
     .filter-list {
         display: flex;
         flex-wrap: wrap;
-        justify-content:space-between;
+        justify-content: space-between;
         align-items: center;
+        width: 100%;
         gap: 0;
     }
 
@@ -690,16 +727,16 @@ ul {
         text-align: left;
     }
 
-    .filter-list__item i{
+    .filter-list__item i {
         padding-right: 0.4em;
     }
 
-    .section--page-content .container{
+    .section--page-content .container {
         flex-direction: column-reverse;
         padding: 0;
     }
 
-    .section-header__lodging__popular{
+    .section-header__lodging__popular {
         width: calc(100% - 20px);
     }
 
@@ -718,6 +755,14 @@ ul {
 
     .lodging__popular-card {
         width: 100%;
+    }
+
+    .lodging__popular-card__figure {
+        width: 137px;
+    }
+
+    .lodging__popular-card__description {
+        width: calc(100% - 137px);
     }
 
     .section--lodging {
@@ -758,7 +803,7 @@ ul {
         height: auto;
     }
 
-    .page-footer{
+    .page-footer {
         background-color: var(--color-gray);
     }
 
