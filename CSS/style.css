@@ -563,7 +563,7 @@ ul {
 
 /*#endregion Footer */
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
 
     .filter {
         gap: 1.4em;
@@ -639,7 +639,7 @@ ul {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
     .menu {
         flex-direction: column;
