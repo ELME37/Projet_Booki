@@ -21,7 +21,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 25px;
 }
@@ -563,7 +563,7 @@ ul {
 
 /*#endregion Footer */
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1024px) {
 
     .filter {
         gap: 1.4em;
